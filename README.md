@@ -1,5 +1,5 @@
-One of the games I absolutely loved growing up was an Apple ][e game called
-Taipan. I found [a version of it online][online-taipan] that seems to be basically identical, but
+One of the games I absolutely loved growing up was an `Apple ][e` game called
+`Taipan`. I found [a version of it online][online-taipan] that seems to be basically identical, but
 converted into JavaScript from the original BASIC. The JavaScript version, BTW,
 is incredibly faithful and totally fun to play. Did I mention it's also free?
 
