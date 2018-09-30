@@ -627,7 +627,7 @@ def unkn_1300
 
   sub_100
 
-  # ON cmd is a like a case statement
+  # ON cmd is like a case statement with a list of lines that are jumped to
   # This appears to be the code that manages the in-port interactions, or at least the buying/selling
   ON CH% GOTO 2530,2570,2700,2620,2680,2695
 
@@ -736,7 +736,13 @@ def unkn_1300
         CALL 2518
         sub_94
         goto_2626
-2629  IF W > (WC - WS) THEN  PRINT: PRINT : PRINT "Your warehouse will only hold an": PRINT"additional ";WC - WS;", ";T$;"!";: CALL 2518: GOSUB 94:GOTO 2626
+
+  IF W > (WC - WS) THEN
+    PRINT
+    PRINT
+    PRINT "Your warehouse will only hold an"
+    PRINT "additional ";WC - WS;", ";T$;"!";
+    CALL 2518: GOSUB 94:GOTO 2626
 2630  IF W > ST(I,J) THEN  PRINT: PRINT : PRINT "You have only ";ST(I,J);", ";T$;".": CALL2518: GOSUB 94: GOTO 2626
 2632 ST(I,J) = ST(I,J) - W:ST(K,J) = ST(K,J) + W:MW = MW +  SGN(I - K) * W:WS = WS +  SGN (I - K) * W: GOSUB 300
 
